@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Key Playground</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="crt"></div>
+    <main class="wrap">
+      <h1>NEON KEY PLAYGROUND</h1>
+      <p class="subtitle">Rhythm toy • 2010 indie style • Keys: W E D J I O</p>
+
+      <section class="hud">
+        <button id="startBtn">Start / Unmute</button>
+        <label>
+          BPM
+          <input id="bpm" type="range" min="80" max="170" step="1" value="120" />
+          <span id="bpmValue">120</span>
+        </label>
+        <label>
+          Glow
+          <input id="glow" type="range" min="0" max="100" value="60" />
+        </label>
+      </section>
+
+      <canvas id="game" width="1100" height="620"></canvas>
+
+      <section class="help">
+        <p>
+          Hit notes on beat and paint the sky with sparks. It's a music playground,
+          not a fail-state game.
+        </p>
+        <p>
+          Optional AI art: put PNGs at <code>assets/gpt/w.png</code>,
+          <code>e.png</code>, <code>d.png</code>, <code>j.png</code>, <code>i.png</code>,
+          <code>o.png</code> generated using GPT Image 2.
+        </p>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
